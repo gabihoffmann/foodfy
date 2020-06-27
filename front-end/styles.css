@@ -28,9 +28,10 @@ body{
 /* === FOODFY GRID LAYOUT === */
 .wrapper{
     display: grid;
-    grid-template: "h" 1fr "m" 70vh "f" 10vh;
+    grid-template: "h" 1fr "m" 1fr "f" 1fr;
     justify-items: center;
 }
+
 .wrapper header{
     padding-left: 5px;
     grid-area: h;
@@ -39,18 +40,28 @@ body{
     align-items: center;
 
     min-width: 940px;
-    min-height: 96px;
+    max-height: 96px;
+
 }
 
 .wrapper main{
     grid-area: m;
+    
+    max-width: 940px;
+    margin: 0 auto;
+    
+    display: flex;
+    flex-direction: column;
 }
 
 .wrapper footer{
     grid-area: f;
 
-    min-height: 62px;
+    max-height: 62px;
     width: 100%;
+
+    position: fixed;
+    bottom: 0;
 
     display: flex;
     flex-direction: column;
@@ -95,6 +106,10 @@ header .menu{
     padding: 0 15px;
 }
 
+.menu__item--active{
+    font-weight: bold;
+}
+
 /* === FOOTER === */
 .footer{
     color: var(--color-text-fourth);
@@ -103,9 +118,6 @@ header .menu{
     font-size: 14px;
     line-height: 24px;
     font-weight: 400;
-
-    position: fixed;
-    bottom: 0;
 }
 
 .footer__author a{
@@ -116,4 +128,33 @@ header .menu{
 .footer__author a:hover{
     border-bottom: 1px solid ;
     transition: 200ms;
+}
+
+/* === PAGE ABOUT === */
+main .about{
+    padding: 15px 0 ;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.about__text{
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 28px;
+    color: var(--color-text-third);
+
+    padding-top: 20px;
+}
+
+.about__title{
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 24px;
+    color: var(--color-text-primary);
+}
+
+.about__title--highlight{
+    font-size: 24px;
+    line-height: 28px;
 }
