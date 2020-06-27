@@ -1,12 +1,89 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
 
+:root{
+    --color-text-primary: ##111111 ;
+    --color-text-secondary: #777777;
+    --color-text-third: #444444 ;
+    --color-text-fourth: #999999;
+    
+    --color-effect-primary: #FBDFDB;
+    --color-effect-secondary: ##EEEEEE ;
+
+    --color-background: #fff;
+}
+
 *{
     margin: 0;
     padding: 0;
     border: 0;
+    box-sizing: border-box;
+    text-decoration: none;
 }
 
 body{
-    background-color: white;
+    background-color: var(--color-background);
     font-family: 'Roboto', sans-serif;
+}
+
+/* === FOODFY GRID LAYOUT === */
+.wrapper{
+    display: grid;
+    grid-template: "h" 1fr "m" 70vh "f" 10vh;
+
+    justify-items: center;
+}
+
+.wrapper header{
+    grid-area: h;
+    
+    display: flex;
+    align-items: center;
+
+    min-width: 940px;
+    min-height: 96px;
+}
+
+.wrapper main{
+    grid-area: m;
+}
+
+.wrapper footer{
+    grid-area: f;
+}
+
+/* === LOGO === */
+.logo{
+    width: 90.6px;
+    height: 26.9px;
+    margin-right:120px;
+}
+
+.logo img{
+    width: 100%;
+    padding-bottom: 5px;
+}
+
+/* === NAV BAR === */
+
+header .menu{
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--color-text-primary);
+
+    display: flex;
+    justify-items: start;
+}
+
+.menu a{
+    color: var(--color-text-primary);
+}
+
+
+.menu a:hover{
+    color: var(--color-effect-primary);
+    border-bottom: 1px solid var(--color-effect-primary);
+}
+
+.menu__item{
+    padding: 0 15px;
 }
