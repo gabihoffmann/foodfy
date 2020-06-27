@@ -7,7 +7,7 @@
     --color-text-fourth: #999999;
     
     --color-effect-primary: #FBDFDB;
-    --color-effect-secondary: ##EEEEEE ;
+    --color-effect-secondary: #eeeeee ;
 
     --color-background: #fff;
 }
@@ -29,11 +29,10 @@ body{
 .wrapper{
     display: grid;
     grid-template: "h" 1fr "m" 70vh "f" 10vh;
-
     justify-items: center;
 }
-
 .wrapper header{
+    padding-left: 5px;
     grid-area: h;
     
     display: flex;
@@ -49,6 +48,14 @@ body{
 
 .wrapper footer{
     grid-area: f;
+
+    min-height: 62px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /* === LOGO === */
@@ -86,4 +93,27 @@ header .menu{
 
 .menu__item{
     padding: 0 15px;
+}
+
+/* === FOOTER === */
+.footer{
+    color: var(--color-text-fourth);
+    background-color: var(--color-effect-secondary);
+
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+
+    position: fixed;
+    bottom: 0;
+}
+
+.footer__author a{
+    color: var(--color-text-third);
+    font-weight: 400;
+}
+
+.footer__author a:hover{
+    border-bottom: 1px solid ;
+    transition: 200ms;
 }
