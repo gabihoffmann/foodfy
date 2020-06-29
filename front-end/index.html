@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foodfy</title>
-
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
     <div class="wrapper">
         <header>
@@ -41,7 +38,7 @@
                         Mais acessadas
                     </div>
                     <div class="recipes__cards">
-                        <div class="recipe__card">
+                        <div class="recipe__card" id="burger">
                             <div class="recipe__image">
                                 <img src="assets/burger.png" alt="recipe photo">
                             </div>
@@ -55,44 +52,72 @@
                             </div>
                         </div>
 
-                        <div class="recipe__card">
+                        <div class="recipe__card" id="pizza">
                             <div class="recipe__image">
-                                <img src="assets/burger.png" alt="recipe photo">
+                                <img src="assets/pizza.png" alt="recipe photo">
                             </div>
                             <div class="recipe__description">
                                 <div class="recipe__title">
-                                    <p>Triplo bacon burger</p>
+                                    <p>Pizza 4 estações</p>
                                 </div>
                                 <div class="recipe__author">
-                                    por Jorge Relato
+                                    por Fabiana Melo
                                 </div>
                             </div>
                         </div>
 
-                        <div class="recipe__card">
+                        <div class="recipe__card" id="espaguete">
                             <div class="recipe__image">
-                                <img src="assets/burger.png" alt="recipe photo">
+                                <img src="assets/espaguete.png" alt="recipe photo">
                             </div>
                             <div class="recipe__description">
                                 <div class="recipe__title">
-                                    <p>Triplo bacon burger</p>
+                                    <p>Espaguete ao alho</p>
                                 </div>
                                 <div class="recipe__author">
-                                    por Jorge Relato
+                                    por Júlia Kinoto
                                 </div>
                             </div>
                         </div>
 
-                        <div class="recipe__card">
+                        <div class="recipe__card" id="lasanha">
                             <div class="recipe__image">
-                                <img src="assets/burger.png" alt="recipe photo">
+                                <img src="assets/lasanha.png" alt="recipe photo">
                             </div>
                             <div class="recipe__description">
                                 <div class="recipe__title">
-                                    <p>Triplo bacon burger</p>
+                                    <p>Lasanha mac n'chesse</p>
                                 </div>
                                 <div class="recipe__author">
-                                    por Jorge Relato
+                                    por Juliano Vieira
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="recipe__card" id="doce">
+                            <div class="recipe__image">
+                                <img src="/assets/doce.png" alt="recipe photo">
+                            </div>
+                            <div class="recipe__description">
+                                <div class="recipe__title">
+                                    <p>Docinhos pão-do-céu</p>
+                                </div>
+                                <div class="recipe__author">
+                                    por Ricardo Golvea
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="recipe__card" id="asinhas">
+                            <div class="recipe__image">
+                                <img src="assets/asinhas.png" alt="recipe photo">
+                            </div>
+                            <div class="recipe__description">
+                                <div class="recipe__title">
+                                    <p>Asinhas de grango ao barbecue</p>
+                                </div>
+                                <div class="recipe__author">
+                                    por Vania Steroski
                                 </div>
                             </div>
                         </div>
@@ -107,6 +132,25 @@
                     target="_blank" rel="noopener noreferrer"> Rocketseat</a> 🚀!</p>
         </footer>
     </div>
+
+    <div class="modal__overlay">
+        <div class="modal">
+            <div class="modal__content">
+                <div class="modal__image recipe__image">
+                    <img src="" alt="recipe photo">
+                </div>
+                <div class="modal__description recipe__description">
+                    <div class="modal__title recipe__title"></div>
+                    <div class="modal__author recipe__author"></div>
+                </div>
+            </div>
+            <div class="modal__controls">
+                <a class="modal__close">Fechar</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
 </body>
 
 </html>

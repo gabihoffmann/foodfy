@@ -144,7 +144,7 @@ main .about{
     line-height: 28px;
     color: var(--color-text-third);
 
-    padding-top: 20px;
+    padding: 20px 0;
 }
 
 .about__title{
@@ -238,6 +238,7 @@ main .about{
     flex-direction: column;
     justify-items: start;
 
+    cursor: pointer;
 }
 
 .recipe__image img{
@@ -263,4 +264,46 @@ main .about{
     font-weight: normal;
     line-height: 16px;
     color: var(--color-text-secondary);
+}
+
+/* === MODAL === */
+.modal__overlay{
+    background-color: rgba(0, 0,0, 0.7);
+    width: 100%;
+    height: 100%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal__overlay.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal{
+    background: white;
+    border-radius: 16px;
+    width: 660px;
+    height: 420px;
+    margin: 25vh auto;
+    padding: 30px;
+
+    text-align: center;
+}
+
+.modal__controls{
+    text-align: center;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 19px;
+    color:var(--color-text-fourth);
+}
+
+.modal__close{
+    cursor: pointer;
 }
