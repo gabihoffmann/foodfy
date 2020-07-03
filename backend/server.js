@@ -4,7 +4,7 @@ const nunjucks = require('nunjucks')
 const server = express()
 const recipes = require('./data/data')
 
-server.use(express.static('./public'))
+server.use(express.static('../public'))
 server.set('view engine', 'njk')
 
 nunjucks.configure('views', {
@@ -15,8 +15,16 @@ nunjucks.configure('views', {
 
 
 //rotas
-server.get("/", function(req,res){
-    return res.send("Hello foodfy!")
+server.get("/", (req,res) => {
+    return res.render("index")
+})
+
+server.get("/about" , (req,res) => {
+    return res.render("about")
+})
+
+server.get("/recipes", (req,res)=>{
+    return res.render("recipes")
 })
 
 server.listen(5000, () => {
