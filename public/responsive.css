@@ -1,0 +1,49 @@
+/* === MEDIA QUERIES === */
+html{
+    font-size: 50%;
+}
+
+@media (max-width: 768px) {
+
+    section.banner .container {
+        width: 90%;
+    }
+
+    section.recipes .container {
+        width: 90%;
+    }
+
+    section.about .container{
+        width: 90%;
+    }
+}
+
+@media (max-width: 680px){
+    header .container{
+        justify-content: space-between;
+    }
+    .logo img{
+        margin: 0;
+    }
+
+
+    section.banner .container{
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 20px 0;
+    }
+    .banner .banner__image{
+        align-self: center;
+        margin-bottom: 10px;
+    }
+
+    .recipes .recipes__title{
+        text-align: center;
+    }
+
+    .recipe__card{
+        text-align: center;
+    }
+
+    
+}
