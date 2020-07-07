@@ -1,0 +1,64 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+<section class="recipes recipes--fullrecipe">
+    <div class="container">
+        <div class="recipe__card--fullrecipe" id="{{recipe.id}}">
+            <div class="recipe__image">
+                <img src="{{recipe.image}}" alt="{{recipe.title}}">
+            </div>
+            
+            <div class="recipe__description">
+                <div class="recipe__title"><h1>{{recipe.title}}</h1></div>
+                <div class="recipe__author"><h3>por {{recipe.author}}</h3></div>
+            </div>
+                
+            <div class="recipe__directions">
+                <div class="container">
+                    <div class="directions__title"><h2>Ingredientes</h2></div>
+                    <button class="directions__controls"></button>
+                </div>
+                
+                <div class="direction__content">
+                    <ul>
+                        {% for ingredient in recipe.ingredients %}
+                            <li>{{ingredient}}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+            <div class="recipe__directions">
+                 <div class="container">
+                    <div class="directions__title"><h2>Modo de preparo</h2></div>
+                    <button class="directions__controls"></button>
+                </div>
+                
+                <div class="direction__content">
+                    <ol>
+                        {% for step in recipe.preparation %}
+                            <li>{{step}}</li>
+                        {% endfor %}
+                    </ol>
+                </div>
+            </div>
+                
+            <div class="recipe__directions">
+                <div class="container">
+                    <div class="directions__title"><h2>Informações adicionais</h2></div>
+                   <button class="directions__controls"></button>
+                </div>
+                
+                <div class="direction__content">
+                    <p>{{recipe.information}}</p>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+</section>
+{% endblock content %}
+
+{% block scripts %}
+    <script src="/scripts.js"></script>
+{% endblock %}
