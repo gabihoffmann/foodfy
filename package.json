@@ -1,8 +1,8 @@
 {
-  "name": "foodfy",
+  "name": "Foodfy ~Launchbase @Rocketseat",
   "version": "1.0.0",
   "description": "Foodfy is a web application focused on food recipes",
-  "main": "server.js",
+  "main": "src/server.js",
   "scripts": {
     "start": "nodemon server.js"
   },
