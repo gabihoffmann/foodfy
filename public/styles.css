@@ -1,311 +1,313 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;400;700&display=swap");
 
-:root{
-    --color-text-primary: ##111111 ;
-    --color-text-secondary: #777777;
-    --color-text-third: #444444 ;
-    --color-text-fourth: #999999;
-    --color-effect-primary: #FBDFDB;
-    --color-effect-secondary: #eeeeee ;
-    --color-background: #fff;
+:root {
+  --color-text-primary: ##111111;
+  --color-text-secondary: #777777;
+  --color-text-third: #444444;
+  --color-text-fourth: #999999;
+  --color-effect-primary: #fbdfdb;
+  --color-effect-secondary: #eeeeee;
+  --color-background: #fff;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    box-sizing: border-box;
-    text-decoration: none;
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  text-decoration: none;
 }
 
-html{
-    /* 1rem == 10px */
-    font-size: 62.5%;
+html {
+  /* 1rem == 10px */
+  font-size: 62.5%;
 }
 
 html,
-body{
-    height: 100vh;
-    background-color: var(--color-background);
-    font-family: 'Roboto', sans-serif;
+body {
+  height: 100vh;
+  background-color: var(--color-background);
+  font-family: "Roboto", sans-serif;
 }
 
-body{
-    font-size: 1.8rem;
+body {
+  font-size: 1.8rem;
 }
 
 /* === FOODFY GRID LAYOUT === */
-header.wrapper__header{
-    grid-area: header;
+header.wrapper__header {
+  grid-area: header;
 }
-main.wrapper__content{
-    grid-area: content;
-}
-
-footer.wrapper__footer{
-    grid-area: footer;
+main.wrapper__content {
+  grid-area: content;
 }
 
-.wrapper{
-    height: 100vh;
-    display: grid;
-    grid-template: "header" "content" "footer";
-    grid-template-rows: auto 1fr auto;
-    grid-template-columns: 100%;
+footer.wrapper__footer {
+  grid-area: footer;
+}
+
+.wrapper {
+  height: 100vh;
+  display: grid;
+  grid-template: "header" "content" "footer";
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
 }
 
 /* === HEADER === */
-header .container{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 
-    width: 90%;
-    max-width: 940px;
-    margin: 30px auto;
+  width: 90%;
+  max-width: 940px;
+  margin: 30px auto;
 }
 
 /* == LOGO == */
-.logo img{
-    width: 90.6px;
-    height: 26.9px;
-    margin-right: 120px;
+.logo img {
+  width: 90.6px;
+  height: 26.9px;
+  margin-right: 120px;
 }
 
 /* == NAV BAR == */
-.menu ul{
-    display: flex;
+.menu ul {
+  display: flex;
 }
 
-.menu .menu__item{
-    list-style: none;
+.menu .menu__item {
+  list-style: none;
 }
 
-.menu__item a{
-    font-size: 1.6rem;
-    line-height: 2.6rem;
-    color: var(--color-text-primary);
-    padding: 2.4rem;
+.menu__item a {
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  color: var(--color-text-primary);
+  padding: 2.4rem;
 }
 
-.menu a:hover{
-    background: rgba(0,0,0, 0.15)
+.menu a:hover {
+  background: var(--color-effect-primary);
+  border-radius: 1em;
 }
 
-.menu__item--active a{
-    font-weight: bold;
+.menu__item--active a {
+  font-weight: bold;
 }
 
 /* === TEXT BASE === */
-h1{
-    color: var(--color-text-primary);
-    font-size: 3.2rem;
-    line-height: 3.8rem;
-    font-weight: bold;
+h1 {
+  color: var(--color-text-primary);
+  font-size: 3.2rem;
+  line-height: 3.8rem;
+  font-weight: bold;
 
-    margin: 10px 0;
+  margin: 10px 0;
 }
 
 h2 {
-    color: var(--color-text-primary);
-    font-size: 2.4rem;
-    line-height: 2.8rem;
-    font-weight: bold;
+  color: var(--color-text-primary);
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  font-weight: bold;
 
-    margin: 20px 0;
+  margin: 20px 0;
 }
 
 h3 {
-    color: var(--color-text-primary);
-    font-size: 2.0rem;
-    line-height: 2.4rem;
-    font-weight: bold;
-    
-    margin: 20px 0;
+  color: var(--color-text-primary);
+  font-size: 2rem;
+  line-height: 2.4rem;
+  font-weight: bold;
+
+  margin: 20px 0;
 }
 
 p {
-    color: var(--color-text-secondary);
-    font-size: 1.8rem;
-    line-height: 2.8rem;
-    font-weight: normal;
+  color: var(--color-text-secondary);
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  font-weight: normal;
 }
 
 /* === BANNER PRINCIPAL === */
 
-section.banner{
-    margin: 5px 0;
+section.banner {
+  margin: 5px 0;
 }
 
-section.banner .container{
-    width: 100%;
-    min-height: 366px;
-    max-width: 940px;
+section.banner .container {
+  width: 100%;
+  min-height: 366px;
+  max-width: 940px;
 
-    margin: auto;
-    background-color: var(--color-effect-primary);
-    border-radius: 30px;
+  margin: auto;
+  background-color: var(--color-effect-primary);
+  border-radius: 30px;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
-.banner .banner__context{
-    margin-right: 2px;
-    width: 100%;
-    max-width: 400px;
+.banner .banner__context {
+  margin-right: 2px;
+  width: 100%;
+  max-width: 400px;
 }
 
-.banner__context p{
-    opacity: 0.7;
-    /* margin: 10px 0px 0px */
+.banner__context p {
+  opacity: 0.7;
+  /* margin: 10px 0px 0px */
 }
 
-.banner .banner__image{
-    max-height: 300px;
-    align-self: flex-end;
+.banner .banner__image {
+  max-height: 300px;
+  align-self: flex-end;
 }
 
-.banner__image img{
-    width: 100%;
+.banner__image img {
+  width: 100%;
 }
 
 /* === RECIPES CARDS === */
-section.recipes .container{
-    width: 100%;
-    max-width: 940px;
-    margin: 20px auto;
+section.recipes .container {
+  width: 100%;
+  max-width: 940px;
+  margin: 20px auto;
 }
 
-.recipes .recipes__title{
-    margin-top: 40px;
-    margin-bottom: 20px;
+.recipes .recipes__title {
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
-.recipes__cards{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    grid-gap: 30px 20px;
-    margin-top: 20px;
+.recipes__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-gap: 30px 20px;
+  margin-top: 20px;
 }
 
-.recipe__card{
-    cursor: pointer;
+.recipe__card {
+  cursor: pointer;
 }
 
-.recipe__image img{
-    border-radius: 15px;
-    width: 100%;
-    height: 100%;
+.recipe__image img {
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
 }
 
-.recipe__description{
-    margin-top: 20px;
+.recipe__description {
+  margin-top: 20px;
 }
 
-.recipe__description .recipe__title h2{
-    font-size: 1.8rem;
-    line-height: 2.1rem;
-    font-weight: normal;
-    color: var(--color-text-primary);
-    margin-bottom: 5px;
+.recipe__description .recipe__title h2 {
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  font-weight: normal;
+  color: var(--color-text-primary);
+  margin-bottom: 5px;
 }
 
-.recipe__description .recipe__author h3{
-    font-size: 1.4rem;
-    line-height: 1.6rem;
-    font-weight: normal;
-    color: var(--color-text-secondary);
+.recipe__description .recipe__author h3 {
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  font-weight: normal;
+  color: var(--color-text-secondary);
 
-    margin: 0;
-}
-
-.recipes--fullrecipe .recipe__description{
-    text-align: center;
+  margin: 0;
 }
 
-.recipes--fullrecipe .recipe__title h1{
-    font-weight: 600;
-}
-.recipes--fullrecipe .recipe__title h3{
-    font-size: 2.2rem;
-    line-height: 2.6rem;
+.recipes--fullrecipe .recipe__description {
+  text-align: center;
 }
 
-section .recipe__directions .container{
-    display: flex;
-    align-items: center;
-    margin: 0;
+.recipes--fullrecipe .recipe__title h1 {
+  font-weight: 600;
+}
+.recipes--fullrecipe .recipe__title h3 {
+  font-size: 2.2rem;
+  line-height: 2.6rem;
 }
 
-.recipe__directions .directions__controls{
-    font-size: 1.2rem;
-    line-height: 1.4rem;
-    font-weight: 500;
-    color: var(--color-text-fourth);
-    text-transform: uppercase;
-    margin-left: 10px;
-    cursor: pointer;
+section .recipe__directions .container {
+  display: flex;
+  align-items: center;
+  margin: 0;
 }
 
-.recipe__directions .direction__content ul, ol, p{
-    color: var(--color-text-third);
-    font-size: 1.8rem;
-    line-height: 2.8rem;
-    font-weight: normal;
-}
-.recipe__directions .direction__content ul, ol{
-    padding-left: 20px;
+.recipe__directions .directions__controls {
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  font-weight: 500;
+  color: var(--color-text-fourth);
+  text-transform: uppercase;
+  margin-left: 10px;
+  cursor: pointer;
 }
 
-.active{
-    display: none;
+.recipe__directions .direction__content ul,
+ol,
+p {
+  color: var(--color-text-third);
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  font-weight: normal;
+}
+.recipe__directions .direction__content ul,
+ol {
+  padding-left: 20px;
+}
+
+.active {
+  display: none;
 }
 
 /* === PAGE ABOUT === */
-section.about .container{
-    width: 100%;
-    max-width: 940px;
-    margin: 20px auto;
+section.about .container {
+  width: 100%;
+  max-width: 940px;
+  margin: 20px auto;
 }
 
 /* === FOOTER === */
-footer.wrapper__footer{
-    background: var(--color-effect-secondary);
+footer.wrapper__footer {
+  background: var(--color-effect-secondary);
 }
 
-.wrapper__footer .container{
-    width: 100%;
-    max-width: 940px;
-    margin: 10px auto;
+.wrapper__footer .container {
+  width: 100%;
+  max-width: 940px;
+  margin: 10px auto;
 
-    text-align: center;
+  text-align: center;
 }
 
-.wrapper__footer p{
-    font-size: 1.4rem;
-    line-height: 1.6rem;
-    color: var(--color-text-fourth);
+.wrapper__footer p {
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  color: var(--color-text-fourth);
 }
 
-.wrapper__footer p a{
-    text-decoration: none;
-    font-weight: 600;
-    font-style: italic;
-    color: var(--color-text-third);
+.wrapper__footer p a {
+  text-decoration: none;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--color-text-third);
 }
 
-.wrapper__footer p span{
-    color: red;
-    font-size: 1.6rem;
-    font-weight: bold;
+.wrapper__footer p span {
+  color: red;
+  font-size: 1.6rem;
+  font-weight: bold;
 }
 
-.wrapper__footer p span:last-child{
-    color: #7159c1;
-    transform: rotate(40deg);
+.wrapper__footer p span:last-child {
+  color: #7159c1;
+  transform: rotate(40deg);
 }
-
-
