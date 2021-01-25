@@ -1,5 +1,5 @@
 {
-  "name": "Foodfy ~Launchbase @Rocketseat",
+  "name": "Foodfy",
   "version": "1.0.0",
   "description": "Foodfy is a web application focused on food recipes",
   "main": "src/server.js",
