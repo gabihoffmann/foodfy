@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;400;700&display=swap");
 
 :root {
-  --color-text-primary: ##111111;
-  --color-text-secondary: #777777;
-  --color-text-third: #444444;
-  --color-text-fourth: #999999;
-  --color-effect-primary: #fbdfdb;
-  --color-effect-secondary: #eeeeee;
-  --color-background: #fff;
+  --text-primary: ##111111;
+  --text-secondary: #777777;
+  --text-third: #444444;
+  --text-fourth: #999999;
+  --effect-primary: #fbdfdb;
+  --effect-secondary: #eeeeee;
+  --background: #fff;
 }
 
 * {
@@ -27,7 +27,7 @@ html {
 html,
 body {
   height: 100vh;
-  background-color: var(--color-background);
+  background-color: var(--background);
   font-family: "Roboto", sans-serif;
 }
 
@@ -85,22 +85,33 @@ header .container {
 .menu__item a {
   font-size: 1.6rem;
   line-height: 2.6rem;
-  color: var(--color-text-primary);
+  color: var(--text-primary);
   padding: 2.4rem;
-}
-
-.menu a:hover {
-  background: var(--color-effect-primary);
-  border-radius: 1em;
+  position: relative;
 }
 
 .menu__item--active a {
   font-weight: bold;
 }
 
+.menu__item a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: var(--effect-primary);
+  position: absolute;
+  left: 0;
+  bottom: 1.6rem;
+}
+
+.menu__item a:hover::after {
+  width: 100%;
+  transition: width 200ms ease-in-out;
+}
+
 /* === TEXT BASE === */
 h1 {
-  color: var(--color-text-primary);
+  color: var(--text-primary);
   font-size: 3.2rem;
   line-height: 3.8rem;
   font-weight: bold;
@@ -109,7 +120,7 @@ h1 {
 }
 
 h2 {
-  color: var(--color-text-primary);
+  color: var(--text-primary);
   font-size: 2.4rem;
   line-height: 2.8rem;
   font-weight: bold;
@@ -118,7 +129,7 @@ h2 {
 }
 
 h3 {
-  color: var(--color-text-primary);
+  color: var(--text-primary);
   font-size: 2rem;
   line-height: 2.4rem;
   font-weight: bold;
@@ -127,7 +138,7 @@ h3 {
 }
 
 p {
-  color: var(--color-text-secondary);
+  color: var(--text-secondary);
   font-size: 1.8rem;
   line-height: 2.8rem;
   font-weight: normal;
@@ -145,7 +156,7 @@ section.banner .container {
   max-width: 940px;
 
   margin: auto;
-  background-color: var(--color-effect-primary);
+  background-color: var(--effect-primary);
   border-radius: 30px;
 
   display: flex;
@@ -210,7 +221,7 @@ section.recipes .container {
   font-size: 1.8rem;
   line-height: 2.1rem;
   font-weight: normal;
-  color: var(--color-text-primary);
+  color: var(--text-primary);
   margin-bottom: 5px;
 }
 
@@ -218,7 +229,7 @@ section.recipes .container {
   font-size: 1.4rem;
   line-height: 1.6rem;
   font-weight: normal;
-  color: var(--color-text-secondary);
+  color: var(--text-secondary);
 
   margin: 0;
 }
@@ -245,7 +256,7 @@ section .recipe__directions .container {
   font-size: 1.2rem;
   line-height: 1.4rem;
   font-weight: 500;
-  color: var(--color-text-fourth);
+  color: var(--text-fourth);
   text-transform: uppercase;
   margin-left: 10px;
   cursor: pointer;
@@ -254,7 +265,7 @@ section .recipe__directions .container {
 .recipe__directions .direction__content ul,
 ol,
 p {
-  color: var(--color-text-third);
+  color: var(--text-third);
   font-size: 1.8rem;
   line-height: 2.8rem;
   font-weight: normal;
@@ -277,7 +288,7 @@ section.about .container {
 
 /* === FOOTER === */
 footer.wrapper__footer {
-  background: var(--color-effect-secondary);
+  background: var(--effect-secondary);
 }
 
 .wrapper__footer .container {
@@ -291,14 +302,14 @@ footer.wrapper__footer {
 .wrapper__footer p {
   font-size: 1.4rem;
   line-height: 1.6rem;
-  color: var(--color-text-fourth);
+  color: var(--text-fourth);
 }
 
 .wrapper__footer p a {
   text-decoration: none;
   font-weight: 600;
   font-style: italic;
-  color: var(--color-text-third);
+  color: var(--text-third);
 }
 
 .wrapper__footer p span {
