@@ -1,56 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foodfy</title>
-    <link rel="stylesheet" href="/styles.css">
-    <link rel="stylesheet" href="/responsive.css" media="screen and (max-width: 768px)"/>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
-<body>
-    <div class="wrapper">
-        <header class="wrapper__header">
-            <div class="container">
-                <div class="logo">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Foodfy</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍱</text></svg>">
+        <link rel="stylesheet" href="/styles.css">
+        <link rel="stylesheet" href="/responsive.css" media="screen and (max-width: 768px)"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <body>
+        <div class="wrapper">
+            <header class="wrapper__header">
+                <div class="container">
+                    <div class="logo">
                         <a href="/">
                             <img src="/assets/logo.png" alt="Foodfy">
                         </a>
+                    </div>
+                    <nav class="menu">
+                        <ul>
+                            <li class='menu__item {{"menu__item--active" if aboutMenu}}'>
+                                <a href="/about">Sobre</a>
+                            </li>
+                            <li class='menu__item {{"menu__item--active" if recipesMenu}}'>
+                                <a href="/recipes">Receitas</a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
-                <nav class="menu">
-                    <ul>
-                        <li class='menu__item {{"menu__item--active" if aboutMenu}}'><a href="/about">Sobre</a></li>
-                        <li class='menu__item {{"menu__item--active" if recipesMenu}}'><a href="/recipes">Receitas</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-        <main class="wrapper__content">
-            {% block content %}{% endblock content %}
-        </main>
-        <footer class="wrapper__footer">
-            <div class="container">
-                <p>Todos direitos reservados, receitas Foodfy.</p>
-                <p class="footer__author">
-                    Feito com 
-                    <span class="material-icons">favorite_border</span>
-                     por 
-                     <a href="http://www.github.com/gabihoffmann" target="_blank"> 
-                        Gabi Hoffmann
-                    </a>
-                    , @Launchbase
-                    <a href="http://rocketseat.com.br/"target="_blank">
-                        Rocketseat
-                    </a>
-                    <span class="material-icons">airplanemode_active</span>
-                    !
-                </p>
-            </div>
-        </footer>
-    </div>
+            </header>
+            <main class="wrapper__content">
+                {% block content %}{% endblock content %}
+            </main>
+            <footer class="wrapper__footer">
+                <div class="container">
+                    <p>Todos direitos reservados, receitas Foodfy.</p>
+                    <p class="footer__author">
+                        Feito com
+                        <span class="material-icons">favorite_border</span>
+                        por
+                        <a href="http://www.github.com/gabihoffmann" target="_blank">
+                            Gabi Hoffmann
+                        </a>
+                        , @Launchbase
+                        <a href="http://rocketseat.com.br/" target="_blank">
+                            Rocketseat
+                        </a>
+                        <span class="material-icons">airplanemode_active</span>
+                        !
+                    </p>
+                </div>
+            </footer>
+        </div>
 
-
-    
-    {% block scripts %}{% endblock %}
-</body>
+        {% block scripts %}{% endblock %}
+    </body>
 </html>
